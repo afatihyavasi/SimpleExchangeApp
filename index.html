@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exchange App | afatihyavasi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="./img/money-exchange.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <img src="img/money-exchange.svg
+" alt="logo"/>
+    <h1 id="appName">EXCHANGE APP &nbsp; | &nbsp; afatihyavasi </h1>
+</header>
+<div class="container ">
+    <div class="from-container">
+        <p class="legend">From</p>
+        <div class="currency-box" id="currency-box-from">
+            <!--Get JS-->
+
+        </div>
+    </div>
+    <div class="to-container">
+        <p class="legend">To</p>
+        <div class="currency-box" id="currency-box-to">
+            <!--Get JS-->
+        </div>
+    </div>
+
+    <div class="currency-amount">
+        <input type="text" name="amount" autocomplete="off" placeholder="Amount" value="" id="input-text"/>
+    </div>
+    <div class="currency-calculate">
+        <button id="calculate-button"><img src="./img/exchange.svg" alt="buton-img"></button>
+    </div>
+    <div class="list-last">
+        <ol class="list-last-value">
+        </ol>
+    </div>
+</div>
+
+<div class="snackbar">
+    <p id="snackbar"></p>
+</div>
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+*:focus{
+    outline: none;
+}
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* OUR CSS */
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: #ffffff;
+
+}
+*:focus{
+    outline: none;
+}
+.legend {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+header {
+    text-align: center;
+    background: #F8F8F8;
+    border-color: #F8F8F8;
+    border-radius: 0;
+    border: 0;
+    padding: 15px 0;
+    margin-bottom: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Raleway', sans-serif;
+}
+
+header h1 {
+    margin: 5px 15px;
+    font-weight: 500;
+}
+
+header img {
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.container {
+    margin: 10px auto;
+    position: center;
+}
+
+.to-container {
+    margin-top: 40px;
+}
+
+[type="radio"] {
+    display: none;
+}
+
+.currency-box {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: flex;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    align-content: center;
+    width: 25px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    transition: background-color 180ms, box-shadow 180ms;
+}
+
+label:hover {
+    background: #eae6e6;
+}
+
+#currency-box-from input[type="radio"]:checked + label {
+    background-color: #fcf968;
+    border-color: #e3de60;
+    box-shadow: 0 0 5px 1px #ddddb6;
+}
+
+#currency-box-to input[type="radio"]:checked + label {
+    background-color: #eda1fd;
+    border-color: #70418c;
+    box-shadow: 0 0 5px 1px #eda1fd;
+}
+
+.currency-amount {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.currency-amount input[type="text"] {
+    border-bottom: #c6c2c2 2px solid;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    font-size: 18px;
+    transition: border-bottom ease 0.5s, width ease 0.5s;
+    width: 200px;
+}
+
+.currency-amount input[type="text"]:focus {
+    border-bottom: #111 2px solid;
+    width: 280px;
+}
+
+.currency-calculate {
+    display: flex;
+    justify-content: center;
+}
+
+.currency-calculate button {
+    margin-bottom: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+.currency-calculate button:hover {
+    transform: rotate(90deg);
+}
+
+.currency-calculate button img:hover {
+    border-radius: 11px;
+    background: #92e073;
+}
+
+.currency-calculate button img {
+    width: 40px;
+    height: 40px;
+    transition: all 400ms;
+    opacity: .8;
+}
+
+.list-last {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.list-last-value {
+    color: #8f8989;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.list-last-value li:first-child {
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 1px auto;
+    padding: 3px;
+    color: #111111;
+}
+
+.list-last-value li {
+    margin: 5px;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    max-width: 100px;
+    margin-left: 25px;
+    background-color: #fdecec;
+    border: 1px solid #e21717;
+    color: #e21717;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: absolute;
+    z-index: 1;
+    left: 70%;
+    bottom: 30px;
+    right: -10px;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.4s, fadeout 0.5s 1s;
+    animation: fadein 0.4s, fadeout 0.5s 1s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.fadein {
+    animation: fade-in 1s 
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #snackbar {
+        visibility: hidden;
+        min-width: 100px;
+        max-width: 250px;
+        margin-left: -125px;
+        background-color: #fdecec;
+        border: 1px solid #e21717;
+        color: #e21717;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 47%;
+        bottom: 30px;
+    }
+
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.4s, fadeout 0.5s 1s;
+        animation: fadein 0.4s, fadeout 0.5s 1s;
+    }
+}
