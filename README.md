@@ -1,6 +1,6 @@
 # SimpleExchangeApp
 
-[Live Demo](https://afatihyavasi.github.io/SimpleExchangeApp/index.html)
+> [Live Demo](https://afatihyavasi.github.io/SimpleExchangeApp/index.html)
 
 **USD** - **EUR** - **GBP** - **TRY** para birimleri arasında kolayca kur dönüşümü yapar.
 
